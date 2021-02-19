@@ -1,0 +1,100 @@
+/**
+*
+Name: Snyder Recordings
+Author: Tim Stone
+Author URI: http://tjstone.me
+Description: Main Stylesheet for Lifted Logic Project
+Version: 1.0
+License: Private Use
+Text Domain: Snyder Recordings
+*
+*/
+
+
+/* ------------------ Contents ------------------ */
+
+/*
+*
+* - 1.0 Text Formatting
+* - - 1.1 Typography
+* - 2.0 Div Styling
+* - - 2.1 Navigation Styling
+*
+*/
+
+/* ------ --- --- --- 1.0 Text Formatting --- --- ------ */
+
+/* --- --- --- 1.1 Typography --- --- --- */
+
+.hero {
+  font-family: font-family: 'Karla', sans-serif;
+  font-weight: 700;
+  font-size: 65px;
+  letter-spacing: .73px;
+  line-height: 76%;
+}
+h1 {
+  font-family: font-family: 'Karla', sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  letter-spacing: 0px;
+  line-height: 50%;
+}
+h2 {
+  font-family: font-family: 'Karla', sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  letter-spacing: 0px;
+  line-height: 40%;
+}
+h3 {
+  font-family: font-family: 'Karla', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 1px;
+  line-height: 25%;
+}
+button {
+  font-family: font-family: 'Karla', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0px;
+  line-height: 18%;
+}
+body {
+  font-family: font-family: 'Karla', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: 0px;
+  line-height: 25%;
+}
+
+/* ------ --- --- --- 2.0 Div Styling --- --- ------ */
+
+/* --- --- --- 2.1 Navigation Styling --- --- --- */
+
+.nav-container {
+  padding: 25px 50px;
+  background-color: #ffffff;
+  position: sticky;
+}
+.logo-container {
+  display: inline-block;
+}
+.menu-container {
+  display: inline-block;
+  float: right;
+}
+.nav {
+  list-style: none;
+}
+.nav-items {
+  display: inline-block;
+  padding: 10px;
+}
+.nav-links {
+  color: #001D5D;
+  text-decoration: none;
+}
+
+/* --- --- --- End of Style --- --- --- */
