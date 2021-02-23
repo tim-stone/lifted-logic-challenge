@@ -23,7 +23,8 @@ Text Domain: Snyder Recordings
 * - - 2.3 About Section Styling
 * - - 2.4 New Releases Slider Styling
 * - - 2.5 Map Section Styling
-* - - 2.6 Global Divs
+* - - 2.6 Footer Styling
+* - - 2.7 Global Divs
 *
 */
 
@@ -240,14 +241,81 @@ html, body #map {
   text-align: left !important;
 }
 
-/* --- --- --- 2.7 Global Divs --- --- --- */
+/* --- --- --- 2.7 Footer Styling --- --- --- */
+
+.footer-container {
+    background-color: #010d5d;
+    padding: 5% 5% 2% 5%;
+    color: #fff;
+}
+.col-6 {
+    display: inline-block;
+    margin: auto;
+    width: 15%;
+    vertical-align: top;
+}
+.foot-headers{
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 17px;
+    text-align: left;
+    margin-top: 0px;
+}
+.foot-nav {
+    padding-left: 0px;
+}
+.foot-items {
+    display: block;
+    text-align: left;
+    font-weight: 200;
+}
+.foot-links {
+    color: #fff;
+    text-decoration: none;
+}
+.foot-text {
+    display: block;
+    text-align: left;
+    font-weight: 200;
+}
+.foot-logo {
+    display: block;
+    float: left;
+    padding-bottom: 25px;
+    vertical-align: top;
+    padding-right: 100%;
+}
+.foot-top {
+    padding-bottom: 50px;
+}
+.foot-bottom {
+    border-top: 1px solid #30477B;
+    padding: 2% 0%;
+    max-width: 92%;
+}
+.foot-right {
+    display: inline-block;
+    float: right;
+    max-width: 50%;
+}
+.foot-left {
+    display: inline-block;
+    float: left;
+    max-width: 50%;
+}
+.bottom-links {
+    display: inline-block;
+    font-weight: 700;
+    padding-right: 20px;
+}
+
+/* --- --- --- 2.8 Global Divs --- --- --- */
 
 .site-wrapper {
   max-width: 100%;
   min-width: 100%;
   overflow: hidden;
   position: relative;
-  top: -15px;
 }
 .row {
   margin: auto;
