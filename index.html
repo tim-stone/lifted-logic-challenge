@@ -98,9 +98,7 @@
 
       <!-- Map Section -->
 
-      <div class="map-container" id="map">
-
-      </div>
+      <div class="map-container" id="map"></div>
 
               <!--<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12407.842986347907!2d-94.7044442!3d38.9705643!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xa7a51cba69767a7e!2sLifted%20Logic!5e0!3m2!1sen!2sus!4v1614098291577!5m2!1sen!2sus" width="100%" height="700px" style="border:0;" allowfullscreen="" loading="lazy"></iframe>-->
 
@@ -111,23 +109,25 @@
       <div class="contact-container">
         <div class="row">
           <div class="column left">
-            <h2 class="left-align">Get In Touch</h2>
-            <p class="left-align">New albums every single month, check out the newest & best from Snyder Recording artist, now available on Apple Music & Spotify.</p>
-            <div class="form-container">
-              <form>
-                <input type="text" id="fname" value="First Name">
-                <input type="text" id="lname" value="Last Name"><br />
-                <input type="email" id="email" value="Email Address">
-                <select name="reason" id="reason">
-                  <option value="booking">Booking</option>
-                  <option value="interview-request">Interview Request</option>
-                  <option value="appearance-request">Appearance Request</option>
-                  <option value="merch-question">Merchandise Question</option>
-                  <option value="other">Other</option>
-                </select><br />
-                <textarea id="message" rows="6" cols="50" value="Message"></textarea><br />
-                <input type="submit" class="btn" value="Submit">
-              </form>
+            <div class="form-section">
+              <h2 class="left-align">Get In Touch</h2>
+              <p class="left-align">New albums every single month, check out the newest & best from Snyder Recording artist, now available on Apple Music & Spotify.</p>
+              <div class="form-container">
+                <form>
+                  <input type="text" id="fname" value="First Name">
+                  <input type="text" id="lname" value="Last Name"><br />
+                  <input type="email" id="email" value="Email Address">
+                  <select name="reason" id="reason">
+                    <option value="booking">Booking</option>
+                    <option value="interview-request">Interview Request</option>
+                    <option value="appearance-request">Appearance Request</option>
+                    <option value="merch-question">Merchandise Question</option>
+                    <option value="other">Other</option>
+                  </select><br />
+                  <textarea id="message" rows="6" cols="50" value="Message"></textarea><br />
+                  <input type="submit" class="btn" value="Submit">
+                </form>
+              </div>
             </div>
           </div>
           <div class="column right">
@@ -137,6 +137,8 @@
       </div>
 
       <!-- End Contact Section -->
+
+    </div><!-- End Site Wrapper -->
 
       <!-- Footer -->
 
@@ -215,23 +217,31 @@
 
       <!-- End Footer -->
 
-    </div><!-- End Site Wrapper -->
-
     <!-- End Painted Site -->
 
     <!-- Google Maps API -->
       <script>
-      var map;
       function initMap() {
-        map = new google.maps.Map(document.getElementById('map'), {
+        var map = new google.maps.Map(document.getElementById('map'), {
             center: {lat: 38.97051951397841, lng: -94.70441650518683},
-            zoom: 8,
-            streetViewControl: false
+            zoom: 15,
+            streetViewControl: false,
+            disableDefaultUI: true,
+            mapId: 	'7ab02cc620cf5d2b'
+        });
+        //Icon Style
+        var iconLifted = 'assets/img/icons/pngs/location_pin.png';
+
+        //Marker
+        var marker = new google.maps.Marker({
+          position: {lat: 38.97051951397841, lng: -94.70441650518683},
+          map: map,
+          icon: iconLifted
         });
       }
       </script>
       <script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyATAylgHblfrH-OUlfY7JvQZ9NYVxh_w14&callback=initMap"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyATAylgHblfrH-OUlfY7JvQZ9NYVxh_w14&map_ids=7ab02cc620cf5d2b&callback=initMap"
       async>
       </script>
 

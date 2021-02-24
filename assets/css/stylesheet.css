@@ -23,8 +23,10 @@ Text Domain: Snyder Recordings
 * - - 2.3 About Section Styling
 * - - 2.4 New Releases Slider Styling
 * - - 2.5 Map Section Styling
-* - - 2.6 Footer Styling
-* - - 2.7 Global Divs
+* - - 2.6 Contact Section Styling
+* - - - 2.6.1 Contact Form Styling
+* - - 2.7 Footer Styling
+* - - 2.8 Global Divs
 *
 */
 
@@ -219,7 +221,7 @@ body {
 /* --- --- --- 2.5 Map Section Styling --- --- --- */
 
 #map {
-  height: 100%;
+  height: 400px !important;
   width: 100%;
 }
 html, body #map {
@@ -232,6 +234,8 @@ html, body #map {
 
 .contact-img {
   position: relative;
+  bottom: 220px;
+  z-index: -99999;
   left: 42%;
 }
 .left-align {
@@ -239,6 +243,48 @@ html, body #map {
 }
 .form-container {
   text-align: left !important;
+}
+.form-section {
+  float: right;
+}
+
+/* ---  2.6.1 Contact Form Styling --- */
+
+form {
+  padding: 50px 0px;
+}
+input {
+  background-color: #e8e8e8;
+  border: none;
+  padding: 15px;
+  color: #000000;
+  font-family: 'Karla', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  margin-right: 6%;
+}
+select {
+  background-color: #e8e8e8;
+  border: none;
+  padding: 15px;
+  color: #000000;
+  font-family: 'Karla', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  margin-right: 6%;
+}
+textarea {
+  background-color: #e8e8e8;
+  border: none;
+  padding: 15px;
+  color: #000000;
+  font-family: 'Karla', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  margin-right: 6%;
 }
 
 /* --- --- --- 2.7 Footer Styling --- --- --- */
@@ -316,6 +362,8 @@ html, body #map {
   min-width: 100%;
   overflow: hidden;
   position: relative;
+  bottom: 15px;
+  margin-bottom: -242px;
 }
 .row {
   margin: auto;
