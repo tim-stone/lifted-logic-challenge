@@ -78,6 +78,11 @@ body {
   line-height: 25px;
   margin: 0;
 }
+a {
+  color: #010d5d;
+  font-weight: 700;
+  text-decoration: none;
+}
 .btn {
   background-color: #D9F0D0;
   color: #68C242;
@@ -155,7 +160,7 @@ body {
   background-size: 100%;
   height: 100vh;
   min-width: 100%;
-  transition: 5s;
+  /*transition: 5s;*/
 }
 .hero-content {
   color: #fff;
@@ -177,12 +182,12 @@ body {
 .play-img {
   padding-right: 15px;
 }
-.zoom-in {
+/*.zoom-in {
     background-size: 110%;
 }
 .zoom-out {
     background-size: 90%;
-}
+}*/
 
 /* --- --- --- 2.3 About Section Styling --- --- --- */
 
@@ -223,6 +228,38 @@ body {
   display: block;
   margin: auto;
   text-align: center;
+  display: inline-block;
+}
+.slider-box {
+  margin: 50px;
+  box-shadow: 0px 0px 50px -30px #000;
+  border-radius: 10px;
+  padding: 10px;
+  height: 29vh;
+  width: 35vw;
+  overflow: hidden;
+}
+.slider-img {
+  width: 10vw;
+  background-color: #f6f6f6;
+  padding-left: 5px;
+  display: inline-block;
+}
+.slider-content {
+  background-color: #ffffff;
+  padding: 40px;
+  text-align: left;
+  display: inline-block;
+  width: 20vw;
+  height: 28vh;
+  position: relative;
+  bottom: 10px;
+  left: 31px;
+}
+.subtitle {
+  color: #68c242;
+  text-transform: uppercase;
+  font-weight: 500;
 }
 
 /* --- --- --- 2.5 Map Section Styling --- --- --- */
@@ -253,6 +290,18 @@ html, body #map {
 }
 .form-section {
   float: right;
+  padding-top: 50px;
+}
+.width-modifier {
+  max-width: 55%;
+}
+.thank-you {
+  display: none;
+  margin-top: 50px;
+  max-width: 50%;
+  text-align: left;
+  background-color: #d9f0d0;
+  padding: 20px;
 }
 
 /* ---  2.6.1 Contact Form Styling --- */
@@ -270,6 +319,7 @@ input {
   font-weight: 700;
   margin-bottom: 30px;
   margin-right: 6%;
+  width: 32.5%;
 }
 select {
   background-color: #e8e8e8;
@@ -281,6 +331,7 @@ select {
   font-weight: 700;
   margin-bottom: 30px;
   margin-right: 6%;
+  width: 36.5%;
 }
 textarea {
   background-color: #e8e8e8;
@@ -292,6 +343,7 @@ textarea {
   font-weight: 700;
   margin-bottom: 30px;
   margin-right: 6%;
+  width: 75.5%;
 }
 
 /* --- --- --- 2.7 Footer Styling --- --- --- */
