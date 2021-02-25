@@ -12,11 +12,15 @@
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Snyder Recordings" />
 
-    <link rel="stylesheet" href="assets/css/stylesheet.css" /> <!-- Main Stylesheet -->
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="assets/css/stylesheet.css" />
 
     <!-- Google Fonts (Karla) -->
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet" />
+
+    <!-- JQuery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
     <!-- Slick carousel -->
     <!--<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />-->
@@ -49,7 +53,7 @@
 
       <!-- Site Hero -->
 
-      <div class="hero-container">
+      <div class="hero-container" id="zoom-in">
         <div class="hero-content">
           <h1>A.M Paradox</h1>
           <p>Christopher Brent Wood, better known by his stage name Brent Faiyaz, is an American singer and record producer. He released his debut project, an extended play entitled A.M. Paradox, in 2016.</p>
@@ -219,31 +223,55 @@
 
     <!-- End Painted Site -->
 
-    <!-- Google Maps API -->
-      <script>
-      function initMap() {
-        var map = new google.maps.Map(document.getElementById('map'), {
-            center: {lat: 38.97051951397841, lng: -94.70441650518683},
-            zoom: 15,
-            streetViewControl: false,
-            disableDefaultUI: true,
-            mapId: 	'7ab02cc620cf5d2b'
+    <!-- Hero zoom on scroll effect -->
+    <!--<script>
+    $(window).ready(function() {
+        var zoom = $(window).ready();
+        $(".hero-container").css({
+            backgroundSize: (100 + 5)  + "%",
+            top: -(10)  + "%",
         });
-        //Icon Style
-        var iconLifted = 'assets/img/icons/pngs/location_pin.png';
+    });
+    </script>-->
+    <script>
+        var timer = setInterval(initZoom, 1000);
 
-        //Marker
-        var marker = new google.maps.Marker({
-          position: {lat: 38.97051951397841, lng: -94.70441650518683},
-          map: map,
-          icon: iconLifted
-        });
-      }
-      </script>
+        function initZoom() {
+            var zoomIn, zoomOut;
+
+
+            zoomIn = document.getElementById('zoom-in'); {
+
+                if (zoomIn.classList.contains('zoom-out') ) {
+                    zoomIn.classList.remove('zoom-out');
+                    zoomIn.classList.add('zoom-in');
+                }
+                else (zoomIn.classList.remove('zoom-in');
+                    zoomIn.classList.add('zoom-out');
+                );
+                zoomIn.id = 'zoom-out';
+            };
+
+            /*zoomOut = document.getElementById('zoom-out'); {
+
+                if (zoomOut.classList.contains('zoom-in') ) {
+                    zoomOut.classList.remove('zoom-in');
+                    zoomOut.classList.add('zoom-out');
+                }
+                else (zoomOut.classList.add('zoom-out') );
+                zoomOut.id = 'zoom-in';
+            };*/
+        }
+
+        window.setInterval(initZoom, 5000); //Sets the interval between zoom in and out
+
+    </script>
+
+    <!-- Google Maps API -->
+      <script src="assets/js/map.js"></script>
       <script
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyATAylgHblfrH-OUlfY7JvQZ9NYVxh_w14&map_ids=7ab02cc620cf5d2b&callback=initMap"
-      async>
-      </script>
+      async></script>
 
       <!-- Slick Carousel -->
       <!--<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>-->
