@@ -8,6 +8,7 @@ function initMap() {
       zoom: 15,
       disableDefaultUI: true,
       mapId: '7ab02cc620cf5d2b'
+
     });
 
     //Icon Style
@@ -19,4 +20,5 @@ function initMap() {
         map: map,
         icon: iconLifted
     });
+
 }

@@ -195,19 +195,27 @@ a {
 .about-container {
   margin: 5%;
 }
+.about-controller {
+  max-height: 44vh;
+  overflow: hidden;
+}
 .about-img {
   max-width: 100%;
+  height: 45vh;
+  padding-right: 20px;
 }
 .info-container {
-  padding-top: 5px;
   max-width: 50%;
+  height: 40vh;
   text-align: left;
+}
+.info-container h2 {
+  line-height: 0px;
 }
 .btn-container {
   float: left;
   position: relative;
-  bottom: 0px;
-  top: 7vh;
+  bottom: 1.1vh;
 }
 
 /* --- --- --- 2.4 New Releases Slider Styling --- --- --- */
@@ -270,7 +278,7 @@ a {
 /* --- --- --- 2.5 Map Section Styling --- --- --- */
 
 #map {
-  height: 400px !important;
+  height: 600px !important;
   width: 100%;
 }
 html, body #map {
@@ -285,7 +293,7 @@ html, body #map {
   position: relative;
   bottom: 220px;
   z-index: -99999;
-  left: 42%;
+  left: 55%;
 }
 .left-align {
   text-align: left !important;
