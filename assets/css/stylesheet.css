@@ -160,13 +160,14 @@ a {
   background-size: 100%;
   height: 100vh;
   min-width: 100%;
-  /*transition: 5s;*/
+  transition: 15s;
 }
 .hero-content {
   color: #fff;
   padding: 20% 50px;
   float: left;
   max-width: 27%;
+  max-height: 100%;
 }
 .hero-content p {
   margin-bottom: 20px;
@@ -182,12 +183,12 @@ a {
 .play-img {
   padding-right: 15px;
 }
-/*.zoom-in {
-    background-size: 110%;
+.zoom-in {
+    background-size: 120%;
 }
 .zoom-out {
-    background-size: 90%;
-}*/
+    background-size: 100% !important;
+}
 
 /* --- --- --- 2.3 About Section Styling --- --- --- */
 
@@ -238,12 +239,14 @@ a {
 }
 .slider-img {
   background-color: #f6f6f6;
-  padding: 15px;
+  padding: 5%;
+  width:20%;
   display: inline-block;
 }
 .slider-content {
   background-color: #ffffff;
-  padding: 20px;
+  padding: 5%;
+  width: 59%;
   text-align: left;
   display: inline-block;
 }

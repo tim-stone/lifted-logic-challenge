@@ -51,7 +51,7 @@
 
       <!-- Site Hero -->
 
-      <div class="hero-container">
+      <div class="hero-container zoom-out" id="zoom">
         <div class="hero-content">
           <h1>A.M Paradox</h1>
           <p>Christopher Brent Wood, better known by his stage name Brent Faiyaz, is an American singer and record producer. He released his debut project, an extended play entitled A.M. Paradox, in 2016.</p>
@@ -73,7 +73,7 @@
               <h2>Brent Faiyaz, So Far Gone</h2>
               <p>Faiyaz began uploading his music onto SoundCloud in 2014 and moved from his hometown Columbia, Maryland to Charlotte, North Carolina before ultimately settling in Los Angeles, California to further his music career. On January 19, 2015, he released his debut single "Allure".[4] On June 1, 2016, Faiyaz released "Invite Me", the lead single from his upcoming debut EP. On September 19, 2016, his 21st birthday, the EP entitled A.M. Paradox was released and received with positive reviews from music critics. On January 26, 2017, Sonder released their debut EP into.</p>
             </div>
-            <div class="btn-container">
+            <div class="btn-container" id="music-anchor">
               <a class="btn">Learn More</a>
             </div>
           </div>
@@ -84,7 +84,7 @@
 
       <!-- New Releases Slider -->
 
-      <div class="slider-container" id="music">
+      <div class="slider-container">
         <div class="slider-section">
           <div class="slider-info">
             <h2>New Releases</h2>
@@ -180,14 +180,14 @@
 
       <!-- Contact Section -->
 
-      <div class="contact-container">
+      <div class="contact-container" id="form-anchor">
         <div class="row">
           <div class="column left">
             <div class="form-section">
               <h2 class="left-align">Get In Touch</h2>
               <p class="left-align width-modifier">New albums every single month, check out the newest & best from Snyder Recording artist, now available on Apple Music & Spotify.</p>
               <div class="form-container" id="form-container">
-                <form id="contact-form" onsubmit="formSubmit()">
+                <form id="contact-form" onsubmit="formSubmit(); return false">
                   <input type="text" id="fname" placeholder="First Name">
                   <input type="text" id="lname" placeholder="Last Name"><br />
                   <input type="email" id="email" placeholder="Email Address">
@@ -204,7 +204,7 @@
                 </form>
               </div>
               <div class="thank-you" id="thank-you">
-                <p>Thank you for reaching out to us! We'll be in touch shortly. Until then check out some <a href="#music">music.</a></p>
+                <p>Thank you for reaching out to us! We'll be in touch shortly. Until then check out some <a href="#music-anchor">music.</a></p>
               </div>
             </div>
           </div>
@@ -293,73 +293,33 @@
         </div>
       </div>
 
-      <!-- End Footer -->
+    <!-- End Footer -->
 
     <!-- End Painted Site -->
+
+    <!-- Javascript Import -->
 
     <!-- Form Submit Mesage -->
 
     <script src="assets/js/form.js"></script>
 
-    <!-- End Form Submit Message -->
+    <!-- JQuery -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 
     <!-- Hero zoom on scroll effect -->
-    <!--<script>
-    $(window).ready(function() {
-        var zoom = $(window).ready();
-        $(".hero-container").css({
-            backgroundSize: (100 + 5)  + "%",
-            top: -(10)  + "%",
-        });
-    });
-    </script>-->
-  <!--  <script>
-        var timer = setInterval(initZoom, 1000);
 
-        function initZoom() {
-            var zoomIn, zoomOut;
+    <script src="assets/js/zoom.js"></script>
 
-
-            zoomIn = document.getElementById('zoom-in'); {
-
-                if (zoomIn.classList.contains('zoom-out') ) {
-                    zoomIn.classList.remove('zoom-out');
-                    zoomIn.classList.add('zoom-in');
-                }
-                else (zoomIn.classList.remove('zoom-in')
-                    zoomIn.classList.add('zoom-out');
-                );
-                zoomIn.id = 'zoom-out';
-            };
-
-            /*zoomOut = document.getElementById('zoom-out'); {
-
-                if (zoomOut.classList.contains('zoom-in') ) {
-                    zoomOut.classList.remove('zoom-in');
-                    zoomOut.classList.add('zoom-out');
-                }
-                else (zoomOut.classList.add('zoom-out') );
-                zoomOut.id = 'zoom-in';
-            };*/
-        }
-
-        window.setInterval(initZoom, 5000); //Sets the interval between zoom in and out
-
-    </script>
+    <!-- Slick Carousel -->
+    <script type="text/javascript" src="assets/js/slick.min.js"></script>
+    <script type="text/javascript" src="assets/js/slider.js"></script>
 
     <!-- Google Maps API -->
-      <script src="assets/js/map.js"></script>
-      <script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyATAylgHblfrH-OUlfY7JvQZ9NYVxh_w14&map_ids=7ab02cc620cf5d2b&callback=initMap"
-      async></script>
+    <script src="assets/js/map.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyATAylgHblfrH-OUlfY7JvQZ9NYVxh_w14&map_ids=7ab02cc620cf5d2b&callback=initMap" async></script>
 
-      <!-- JQuery -->
-      <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
-      <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-
-      <!-- Slick Carousel -->
-      <script type="text/javascript" src="assets/js/slick.min.js"></script>
-      <script type="text/javascript" src="assets/js/slider.js"></script>
+    <!-- End Javascript Import -->
 
   </body>
 
