@@ -31,10 +31,11 @@ Text Domain: Snyder Recordings
 * - 3.0 Media Queries
 * - - 3.1 Large Laptops
 * - - 3.2 Small Laptops/Landscape Tablets
-* - - 3.3 Tablets
-* - - 3.4 Large Phones
-* - - 3.5 Standard Phones
-* - - 3.6 Small Phones
+* - - 3.3 Large Tablets
+* - - 3.4 Small Tablets
+* - - 3.5 Large Phones
+* - - 3.6 Medium Phones
+* - - 3.7 Small Phones
 *
 */
 
@@ -271,7 +272,6 @@ a {
   padding-bottom: 25px;
 }
 .slider {
-  display: block;
   margin: auto;
   text-align: center;
   display: inline-block;
@@ -284,14 +284,14 @@ a {
 }
 .slider-img {
   background-color: #f6f6f6;
-  padding: 5%;
-  width:20%;
+  padding: 2%;
+  width: 9.5%;
   display: inline-block;
 }
 .slider-content {
   background-color: #ffffff;
-  padding: 5%;
-  width: 59%;
+  padding: 3%;
+  width: 80%;
   text-align: left;
   display: inline-block;
 }
@@ -497,7 +497,7 @@ textarea {
 
 /* --- --- --- 3.2 Large Laptops --- --- --- */
 
-@media screen and (max-width: 1919px) and (min-width: 1440px) {
+@media screen and (max-width: 1920px) and (min-width: 1441px) {
   .about-controller {
     max-height: 55vh;
   }
@@ -530,7 +530,7 @@ textarea {
 
 /* --- --- --- 3.2 Small Laptops/Horizontal Tablets --- --- --- */
 
-@media screen and (max-width: 1439px) and (min-width: 1024px) {
+@media screen and (max-width: 1440px) and (min-width: 1025px) {
   .menu-container {
     padding-right: 0px;
   }
@@ -552,11 +552,28 @@ textarea {
     height: auto;
     max-width: 160%;
   }
+  .slider-img {
+    padding: 5%;
+    width: 9.5%;
+  }
+  .slider-content {
+    padding: 10%;
+    width: 60%;
+  }
+  input {
+    width: 31.5%;
+  }
+  textarea {
+    width: 74.5%;
+  }
+  .contact-img {
+    left 17%;
+  }
 }
 
-/* --- --- --- 3.3 Tablets --- --- --- */
+/* --- --- --- 3.3 Large Tablets --- --- --- */
 
-@media screen and (max-width: 1023px) and (min-width: 768px) {
+@media screen and (max-width: 1024px) and (min-width: 769px) {
   .nav {
     display: none;
   }
@@ -581,11 +598,40 @@ textarea {
   .about-controller {
     max-height: 100%;
   }
+  .slider-info {
+    max-width: 50%;
+  }
+  .slider-img {
+    width: 10%;
+  }
+  .slider-content {
+    width: 40%;
+    padding: 6%;
+  }
+  .form-section {
+    padding-left: 190px;
+  }
+  input {
+    width: 31%;
+  }
+  select {
+    width: 34.5%;
+  }
+  textarea {
+    width: 72.5%;
+  }
+  .contact-img {
+    left: 0%;
+    bottom: 0px;
+  }
+  .thank-you {
+    margin-bottom: 50px;
+  }
 }
 
-/* --- --- --- 3.4 Large Phones --- --- --- */
+/* --- --- --- 3.4 Small Tablets --- --- --- */
 
-@media screen and (max-width: 767px) and (min-width: 425px) {
+@media screen and (max-width: 768px) and (min-width: 426px) {
   .nav {
     display: none;
   }
@@ -619,11 +665,43 @@ textarea {
   .about-controller {
     max-height: 100%;
   }
+  .slider-info {
+    max-width: 50%;
+  }
+  .slider-img {
+    display: block;
+    width: 1%;
+    padding: 3% 45%;
+  }
+  .slider-content {
+    display: block;
+    width: 30%;
+    padding: 1% 25%;
+  }
+  .form-section {
+    padding-left: 65px;
+  }
+  input {
+    width: 37.5%;
+  }
+  select {
+    width: 42%;
+  }
+  textarea {
+    width: 86%;
+  }
+  .contact-img {
+    left: 0%;
+    bottom: 0px;
+  }
+  .thank-you {
+    margin-bottom: 50px;
+  }
 }
 
-/* --- --- --- 3.5 Standard Phones --- --- --- */
+/* --- --- --- 3.5 Large Phones --- --- --- */
 
-@media screen and (max-width: 424px) and (min-width: 375px) {
+@media screen and (max-width: 425px) and (min-width: 376px) {
   .nav {
     display: none;
   }
@@ -657,11 +735,48 @@ textarea {
   .about-controller {
     max-height: 100%;
   }
+  .slider-info {
+    max-width: 50%;
+  }
+  .slider-img {
+    display: block;
+    width: 1%;
+    padding: 3% 45%;
+  }
+  .slider-content {
+    display: block;
+    width: 25%;
+    padding: 1% 35%;
+  }
+  .form-section {
+    padding-left: 65px;
+  }
+  input {
+    width: 85.5%;
+  }
+  .btn {
+    width: 95%;
+  }
+  select {
+    width: 94%;
+  }
+  textarea {
+    width: 86%;
+  }
+  .contact-img {
+    left: 0%;
+    bottom: 30px;
+    max-width: 105%;
+  }
+  .thank-you {
+    margin-bottom: 50px;
+    max-width: 85%;
+  }
 }
 
-/* --- --- --- 3.6 Small Phones --- --- --- */
+/* --- --- --- 3.6 Medium Phones --- --- --- */
 
-@media screen and (max-width: 375px) and (min-width: 320px) {
+@media screen and (max-width: 375px) and (min-width: 321px) {
   .nav {
     display: none;
   }
@@ -689,11 +804,116 @@ textarea {
   .btn-container {
     padding-left: 30px;
   }
-  .about-img {
+  .slider-info {
+    max-width: 50%;
+  }
+  .slider-img {
+    display: block;
+    width: 1%;
+    padding: 3% 45%;
+  }
+  .slider-content {
+    display: block;
+    width: 25%;
+    padding: 1% 37%;
+  }
+  .form-section {
+    padding-left: 65px;
+  }
+  input {
+    width: 85.5%;
+  }
+  .btn {
+    width: 95%;
+  }
+  select {
+    width: 95.5%;
+  }
+  textarea {
+    width: 86%;
+  }
+  .contact-img {
+    left: 0%;
+    bottom: 30px;
+    max-width: 105%;
+  }
+  .thank-you {
+    margin-bottom: 50px;
+    max-width: 85%;
+  }
+  .width-modifier {
+    max-width: 95%;
+  }
+}
+/* --- --- --- 3.7 Small Phones --- --- --- */
+
+@media screen and (max-width: 320px) and (min-width: 275px) {
+  .nav {
+    display: none;
+  }
+  .mob-btn {
+    display: block;
+  }
+  .hero-content {
+    max-width: 65%;
+  }
+  .hero-container {
+    height: 70vh;
+  }
+  .zoom-in {
+    background-size: 100%;
+  }
+  .column {
+    display: block;
+    max-width: 100%;
+  }
+  .info-container {
+    padding: 30px;
+    max-width: 100%;
     height: auto;
   }
-  .about-controller {
-    max-height: 100%;
+  .btn-container {
+    padding-left: 30px;
+  }
+  .slider-info {
+    max-width: 60%;
+  }
+  .slider-img {
+    display: block;
+    width: 1%;
+    padding: 3% 45%;
+  }
+  .slider-content {
+    display: block;
+    width: 20%;
+    padding: 1% 40%;
+  }
+  .form-section {
+    padding-left: 30px;
+  }
+  input {
+    width: 85.5%;
+  }
+  .btn {
+    width: 97% !important;
+  }
+  select {
+    width: 97.5%;
+  }
+  textarea {
+    width: 86%;
+  }
+  .contact-img {
+    left: 0%;
+    bottom: 30px;
+    max-width: 105%;
+  }
+  .thank-you {
+    margin-bottom: 50px;
+    max-width: 85%;
+  }
+  .width-modifier {
+    max-width: 95%;
   }
 }
 

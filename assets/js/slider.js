@@ -4,14 +4,23 @@ $(document).ready(function(){
     centerMode: true,
     centerPadding: '5px',
     slidesToShow: 3,
+    rows: 1,
+    variableWidth: true,
     arrows: true,
     prevArrow: '.slick-prev',
     nextArrow: '.slick-next',
     responsive: [
       {
-        breakpoint: 768,
+        breakpoint: 1920, // Large Laptops
         settings: {
-          arrows: false,
+          centerMode: true,
+          centerPadding: '40px',
+          slidesToShow: 3,
+        }
+      },
+      {
+        breakpoint: 1440, // Small Laptops/Landscape Tablets & Tablets
+        settings: {
           centerMode: true,
           centerPadding: '40px',
           slidesToShow: 3,
@@ -19,11 +28,10 @@ $(document).ready(function(){
         }
       },
       {
-        breakpoint: 480,
+        breakpoint: 768, //All Phones Sizes
         settings: {
-          arrows: false,
           centerMode: true,
-          centerPadding: '40px',
+          centerPadding: '10px',
           slidesToShow: 1,
           touchMove: true
         }
