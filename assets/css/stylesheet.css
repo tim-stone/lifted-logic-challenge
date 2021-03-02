@@ -29,13 +29,14 @@ Text Domain: Snyder Recordings
 * - - 2.7 Footer Styling
 * - - 2.8 Global Divs
 * - 3.0 Media Queries
-* - - 3.1 Large Laptops
-* - - 3.2 Small Laptops/Landscape Tablets
-* - - 3.3 Large Tablets
-* - - 3.4 Small Tablets
-* - - 3.5 Large Phones
-* - - 3.6 Medium Phones
-* - - 3.7 Small Phones
+* - - 3.1 4k Displays/Desktops
+* - - 3.2 Large Laptops
+* - - 3.3 Small Laptops/Landscape Tablets
+* - - 3.4 Large Tablets
+* - - 3.5 Small Tablets
+* - - 3.6 Large Phones
+* - - 3.7 Medium Phones
+* - - 3.8 Small Phones
 *
 */
 
@@ -120,6 +121,9 @@ a {
 .logo-container {
   display: inline-block;
 }
+.logo-link:hover {
+  opacity: .5;
+}
 .site-logo {
   min-width: 100px;
 }
@@ -145,6 +149,9 @@ a {
   font-size: 20px;
   letter-spacing: 0px;
   line-height: 25%;
+}
+.nav-links:hover {
+  opacity: .5;
 }
 .nav-items:last-child .nav-links {
   background-color: #D9F0D0;
@@ -213,6 +220,9 @@ a {
 .video-link {
   color: #fff;
   text-decoration: none;
+}
+.video-link:hover {
+  opacity: .5;
 }
 .video-link-inner {
   position: relative;
@@ -326,9 +336,14 @@ html, body #map {
 
 /* --- --- --- 2.6 Contact Section Styling --- --- --- */
 
+.contact-container {
+  margin-bottom: -270px;
+  padding-bottom: 0px;
+  overflow: visible
+}
 .contact-img {
   position: relative;
-  bottom: 220px;
+  bottom: 200px;
   z-index: -99999;
   left: 55%;
 }
@@ -402,6 +417,7 @@ textarea {
     background-color: #010d5d;
     padding: 5% 5% 2% 5%;
     color: #fff;
+    z-index: 1;
 }
 .col-6 {
     display: inline-block;
@@ -427,6 +443,9 @@ textarea {
 .foot-links {
     color: #fff;
     text-decoration: none;
+}
+.foot-links:hover {
+  color: #ffffff8a !important;
 }
 .foot-text {
     display: block;
@@ -463,6 +482,9 @@ textarea {
     font-weight: 700;
     padding-right: 20px;
 }
+.bottom-links:hover {
+  opacity: .5;
+}
 
 /* --- --- --- 2.8 Global Divs --- --- --- */
 
@@ -472,7 +494,7 @@ textarea {
   overflow: hidden;
   position: relative;
   bottom: 40px;
-  margin-bottom: -270px;
+  margin-bottom: -40px;
 }
 .row {
   margin: auto;
@@ -495,7 +517,15 @@ textarea {
 
 /* ------ --- --- --- 3.0 Media Queries --- --- --- ------ */
 
-/* --- --- --- 3.2 Large Laptops --- --- --- */
+/* --- --- --- 3.1 4k Displays/Extra Large Displays --- --- --- */
+
+@media screen and (max-width: 2560px) and (min-width: 1921px) {
+  .contact-img {
+    left: 77%;
+  }
+}
+
+/* --- --- --- 3.2 Large Laptops/Desktops --- --- --- */
 
 @media screen and (max-width: 1920px) and (min-width: 1441px) {
   .about-controller {
@@ -521,14 +551,15 @@ textarea {
     margin: 0px 10px 15px 10px;
   }
   .slider-img {
-    width: 23%;
+    width: 26.5%;
+    padding: 2.5%
   }
   .slider-content {
-    width: 56%;
+    width: 61%;
   }
 }
 
-/* --- --- --- 3.2 Small Laptops/Horizontal Tablets --- --- --- */
+/* --- --- --- 3.3 Small Laptops/Horizontal Tablets --- --- --- */
 
 @media screen and (max-width: 1440px) and (min-width: 1025px) {
   .menu-container {
@@ -571,7 +602,7 @@ textarea {
   }
 }
 
-/* --- --- --- 3.3 Large Tablets --- --- --- */
+/* --- --- --- 3.4 Large Tablets --- --- --- */
 
 @media screen and (max-width: 1024px) and (min-width: 769px) {
   .nav {
@@ -579,6 +610,9 @@ textarea {
   }
   .mob-btn {
     display: block;
+  }
+  .hero-container {
+    height: 50vh;
   }
   .hero-content {
     max-width: 45%;
@@ -597,6 +631,8 @@ textarea {
   }
   .about-controller {
     max-height: 100%;
+    height: auto;
+    overflow: unset;
   }
   .slider-info {
     max-width: 50%;
@@ -629,7 +665,7 @@ textarea {
   }
 }
 
-/* --- --- --- 3.4 Small Tablets --- --- --- */
+/* --- --- --- 3.5 Small Tablets --- --- --- */
 
 @media screen and (max-width: 768px) and (min-width: 426px) {
   .nav {
@@ -697,9 +733,15 @@ textarea {
   .thank-you {
     margin-bottom: 50px;
   }
+  .footer-container {
+    padding: 5% 2% 2% 2%;
+  }
+  .foot-headers, .foot-nav {
+    padding-left: 10px;
+  }
 }
 
-/* --- --- --- 3.5 Large Phones --- --- --- */
+/* --- --- --- 3.6 Large Phones --- --- --- */
 
 @media screen and (max-width: 425px) and (min-width: 376px) {
   .nav {
@@ -728,6 +770,9 @@ textarea {
   }
   .btn-container {
     padding-left: 30px;
+  }
+  .about-controller {
+    max-height: none;
   }
   .about-img {
     height: auto;
@@ -772,9 +817,27 @@ textarea {
     margin-bottom: 50px;
     max-width: 85%;
   }
+  .footer-container {
+    padding: 5% 2% 2% 10%;
+  }
+  .col-6 {
+    display: block;
+    width: 100%;
+  }
+  .foot-left {
+    display: block;
+    float: none;
+    max-width: 100%;
+    padding-bottom: 20px;
+  }
+  .foot-right {
+    display: block;
+    float: none;
+    max-width: 100%;
+  }
 }
 
-/* --- --- --- 3.6 Medium Phones --- --- --- */
+/* --- --- --- 3.7 Medium Phones --- --- --- */
 
 @media screen and (max-width: 375px) and (min-width: 321px) {
   .nav {
@@ -795,6 +858,12 @@ textarea {
   .column {
     display: block;
     max-width: 100%;
+  }
+  .about-controller {
+    max-height: none;
+  }
+  .about-img {
+    height: auto;
   }
   .info-container {
     padding: 30px;
@@ -844,8 +913,26 @@ textarea {
   .width-modifier {
     max-width: 95%;
   }
+  .footer-container {
+    padding: 5% 2% 2% 10%;
+  }
+  .col-6 {
+    display: block;
+    width: 100%;
+  }
+  .foot-left {
+    display: block;
+    float: none;
+    max-width: 100%;
+    padding-bottom: 20px;
+  }
+  .foot-right {
+    display: block;
+    float: none;
+    max-width: 100%;
+  }
 }
-/* --- --- --- 3.7 Small Phones --- --- --- */
+/* --- --- --- 3.8 Small Phones --- --- --- */
 
 @media screen and (max-width: 320px) and (min-width: 275px) {
   .nav {
@@ -866,6 +953,12 @@ textarea {
   .column {
     display: block;
     max-width: 100%;
+  }
+  .about-controller {
+    max-height: none;
+  }
+  .about-img {
+    height: auto;
   }
   .info-container {
     padding: 30px;
@@ -905,7 +998,7 @@ textarea {
   }
   .contact-img {
     left: 0%;
-    bottom: 30px;
+    bottom: 60px;
     max-width: 105%;
   }
   .thank-you {
@@ -914,6 +1007,24 @@ textarea {
   }
   .width-modifier {
     max-width: 95%;
+  }
+  .footer-container {
+    padding: 5% 2% 2% 10%;
+  }
+  .col-6 {
+    display: block;
+    width: 100%;
+  }
+  .foot-left {
+    display: block;
+    float: none;
+    max-width: 100%;
+    padding-bottom: 20px;
+  }
+  .foot-right {
+    display: block;
+    float: none;
+    max-width: 100%;
   }
 }
 

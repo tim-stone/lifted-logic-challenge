@@ -1,7 +1,7 @@
 # lifted-logic-challenge
  Sample project for lifted logic application
 
-COLOR GUIDE
+Style Guide
 
 Dark Blue: #010d5d
 Light Blue: #c8bfcf
